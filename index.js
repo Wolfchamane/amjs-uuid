@@ -5,9 +5,12 @@
 module.exports = () =>
 {
     let seed = Date.now();
-    if (!!window && window.performance && typeof window.performance.now === 'function')
+    if (window)
     {
-        seed += window.performance.now();
+        if (window.performance && window.performance.now instanceof Function)
+        {
+            seed += window.performance.now();
+        }
     }
 
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c =>
