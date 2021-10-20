@@ -7,7 +7,6 @@ const EXPECTED = 3;
 
 (() =>
 {
-    global.window = undefined;
     equal(typeof uuid() === 'string', true, '@amjs/uuid works for NodeJS');
     tests++;
 })();
@@ -26,7 +25,7 @@ const EXPECTED = 3;
             now     : () => Math.random()
         }
     };
-    equal(typeof uuid() === 'string', true, '@amjs/uuid works for browser');
+    equal(typeof uuid() === 'string', true, '@amjs/uuid works for modern browser');
     global.window = undefined;
     tests++;
 })();
