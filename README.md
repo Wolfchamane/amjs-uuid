@@ -1,4 +1,4 @@
-# @amjs/uuid 1.0.0
+# @amjs/uuid 1.0.1
 
 > Creates an unique v4 string
 
